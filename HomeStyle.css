@@ -1,0 +1,387 @@
+/* CSS reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+/* CSS variables */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation bar  */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: 0px;
+}
+
+/* Navigation bar: Logo and image  */
+#logo {
+    margin: 0px 27px;
+    margin-right: 10px;
+}
+
+#navbar::before {
+    content: " ";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#logo img {
+    height: 62px;
+    margin: 1px 1px;
+}
+
+/* Navigation bar: List Styling */
+#navbar ul {
+    display: flex;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+
+#navbar ul li {
+    list-style: none;
+    font-size: 1rem
+}
+
+#navbar ul li a {
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+#navbar ul li a:hover {
+    color: black;
+    background-color: white;
+}
+
+/* home section */
+#home {
+    height: 515px;
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    justify-content: center;
+    align-items: center;
+}
+
+#home::before {
+    content: " ";
+    background: url(img/resumebg.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 580px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+#home h1 {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+    font-family: 'Bree Serif', serif;
+    padding: 13px;
+}
+
+#home p {
+    color: black;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: 'Bree Serif', serif;
+}
+
+/* services section  */
+#services {
+    margin: 34px;
+    display: flex;
+}
+
+#services .box {
+    height: 329px;
+    width: 373px;
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 19px;
+    border-radius: 28px;
+    background-color: rgb(175, 159, 153);
+    margin-bottom: 30px;
+}
+
+#services .box img {
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services .box p {
+    font-family: 'Bree Serif', serif;
+}
+
+/* client section  */
+.client-section {
+    height: 344px;
+}
+
+.client-section::before {
+    content: "";
+    position: absolute;
+    background: url(img/bg6.jpg) no-repeat center center/cover;
+    width: 100%;
+    height: 350px;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+.clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.client-items {
+    padding: 34px;
+}
+
+.clients img {
+    height: 70px;
+    padding-top: 25px;
+}
+
+/* contact section  */
+.contact {
+    position: relative;
+}
+
+.contact::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url(img/Contact.jpg) no-repeat center center/cover;
+    z-index: -1;
+    opacity: 0.4;
+    margin-top: 6px;
+}
+
+#contact-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 135px;
+    padding-bottom: 34px;
+}
+
+#contact-box input,
+#contact-box textarea {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+#contact-box form {
+    width: 40%;
+}
+
+#contact-box label {
+    font-size: 1rem;
+    font-family: 'Bree Serif', serif;
+}
+
+.contact button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 4px 234px;
+    border-radius: 15px;
+    font-size: 15px;
+    margin-top: 12px;
+    background-color: white;
+    font-family: 'Bree Serif', serif;
+}
+
+.contact button:hover {
+    background-color: #000000;
+    color: white;
+    cursor: pointer;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 14px;
+}
+
+/* utility classes */
+.h-primery {
+    font-family: 'Bree Serif', serif;
+    /* margin-top: 30px; */
+    font-size: 2.8rem;
+    padding: 12px;
+}
+
+.h-secondary {
+    font-family: 'Bree Serif', serif;
+    font-size: 2rem;
+    padding: 12px;
+}
+
+/* .btn {
+    padding: 6px 20px;
+    border: 2px solid white;
+    border-radius: 10px;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5;
+    cursor: pointer;
+} */
+
+.center {
+    text-align: center;
+}
+
+/* body color  */
+body {
+    background-color: rgb(218, 234, 240);
+}
+
+/* #services .box:hover{
+@keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+  
+  #services .box {
+    border: 2px solid brown;
+    padding: 34px;
+    margin: 3px 19px;
+    border-radius: 28px;
+    background-color: rgb(215, 221, 224);
+    margin-bottom: 30px;
+    animation: fade-in 0.5s ease-out;
+  } */
+
+/* .btn {
+    cursor: pointer;
+    position: relative;
+    padding: 10px 24px;
+    margin-top: 20px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 34px;
+    background-color: transparent;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.320, 1);
+    overflow: hidden;
+  }
+  
+  .btn::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 50px;
+    height: 50px;
+    border-radius: inherit;
+    scale: 0;
+    z-index: -1;
+    background-color: rgb(193, 111, 98);
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+  }
+  
+  .btn:hover::before {
+    scale: 3;
+  }
+  
+  .btn:hover {
+    color: #212121;
+    scale: 1.1;
+    box-shadow: 0 0px 20px rgba(193, 163, 98,0.4);
+  }
+  
+  .button:active {
+    scale: 1;
+  } */
+
+
+.btn {
+    margin-top: 25px;
+    text-decoration: none;
+    position: relative;
+    border: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    /* font-family: inherit; */
+    color: #fff;
+    width: 9em;
+    height: 3em;
+    line-height: 2em;
+    text-align: center;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 300%;
+    border-radius: 30px;
+    z-index: 1;
+}
+
+.btn:hover {
+    animation: ani 8s linear infinite;
+    border: none;
+}
+
+@keyframes ani {
+    0% {
+        background-position: 0%;
+    }
+
+    100% {
+        background-position: 400%;
+    }
+}
+
+.btn:before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    z-index: -1;
+    background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+    background-size: 400%;
+    border-radius: 35px;
+    transition: 1s;
+}
+
+.btn:hover::before {
+    filter: blur(20px);
+}
+
+.btn:active {
+    background: linear-gradient(32deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+}

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume builder</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Belanosima&family=Bree+Serif&family=Lato&family=Ubuntu:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- html code :  -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-2 font2">Resume Builder</h1>
+        <p class="text-center font2">build Your Resume in minutes</p>
+        <hr>
+
+        <div class="row">
+            <div class="col-md-6">
+                <!-- first col  -->.
+                <h2 class="font">Personal Information</h2>
+
+                <div class="font form-group">
+                    <label for="imageInput">Select an Image</label>
+                    <input type="file" id="imageInput" accept="image/*" class="form-control">
+                </div>
+
+
+                <div class="font form-group ">
+                    <label for="nameField">your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter your name" class="form-control">
+                </div>
+
+                <div class="font form-group mt-2">
+                    <label for="ContactField">Mobile No</label>
+                    <input type="text" id="ContactField" placeholder="Contact" class="form-control">
+                </div>
+
+                <div class="font form-group">
+                    <label for="AddressField">Enter Address:</label>
+                    <textarea id="AddressField" placeholder="Enter here" class="form-control"> </textarea>
+                </div>
+
+                <p class="font text-secondary mt-4">Important Links</p>
+                <div class="font form-group">
+                    <label for="fbField">Facebook</label>
+                    <input type="text" id="fbField" placeholder="Enter here " class="form-control">
+                </div>
+
+                <div class="font form-group">
+                    <label for="InstaField">Instagram</label>
+                    <input type="text" id="InstaField" placeholder="Enter here " class="form-control">
+                </div>
+
+                <div class="font form-group">
+                    <label for="LinkedField">LinkedIn</label>
+                    <input type="text" id="LinkedField" placeholder="Enter here" class="form-control">
+                </div>
+            </div>
+
+            <div class="col-md-6 mt-4">
+                <!-- second col  -->
+                <h2 class="font"> Professional Information</h2>
+
+                <div class="font form-group">
+                    <label for="">Objective</label>
+                    <textarea id="ObField" placeholder="Enter here" class="form-control " rows="3"> </textarea>
+                </div>
+
+                <div class="font form-group mt-2" id="we">
+                    <label for="">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="3"> </textarea>
+
+
+                    <div class="container text-center " id="weAddButton">
+                        <button onclick="addNewWEField()" id="genBtn" class="btn btn-primary btn-sm mt-3">ADD</button>
+                    </div>
+                </div>
+
+
+                <div class="font form-group " id="aq">
+                    <label for="">Acadmic Qualification</label>
+                    <textarea placeholder="Enter here" class="form-control eqField" rows="3"> </textarea>
+
+                    <div class="container text-center mt-2 " id="aqAddButton">
+                        <button onclick="addNewAQField()" id="genBtn" class=" btn btn-primary btn-sm">ADD</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container text-center mt-3">
+            <button onclick="generateCV()" id="genBtn" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- CV template -->
+    <div class="container" id="cv-template">
+        <div class="row">
+            <!-- First column -->
+            <div class="col-xs-12 col-md-4 text-center background">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/020/765/399/small/default-profile-account-unknown-icon-black-silhouette-free-vector.jpg"
+                    alt="
+                    Profile Picture" id="imgT" class=" myimg" />
+                <div class="container">
+                    <p id="nameT1">Ravishankar Kharabe</p>
+                    <p id="contactT">9764984407, 9561691312</p>
+                    <p id="addressT">Bodhe Nagar Latur 413512</p>
+                    <hr>
+                    <p id="fbT"> <a href="#1"> https://www.facebook.com/RavishankarKharabe</a></p>
+                    <p id="instaT"> <a href="#2"> https://www.instagaram.com/RavishankarKharabe</a></p>
+                    <p id="linkedT"> <a href="#3"> https://www.linkedin.com/RavishankarKharabe</a></p>
+
+                </div>
+            </div>
+
+            <!-- Second column -->
+            <div class="col-xs-12 col-md-8 py-5">
+                <!-- Add content here: work experience, education, skills, etc. -->
+                <h1 id="nameT2" class="text-center" style="font-weight: 980;"> Ravishankar Kharabe</h1>
+
+                <!-- objective card -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background-color: aqua;">
+                        <h3>Objective</h3>
+                    </div>
+                    <div class="card-body">
+                        <p id="ObT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda quia nesciunt
+                            nisi!
+                            Aliquid sed eius, deserunt animi vero reiciendis facilis expedita voluptas veritatis illo
+                            dolores excepturi adipisci? Itaque eligendi fuga ex excepturi nostrum! Asperiores,
+                            perferendis animi quibusdam ex expedita praesentium voluptas minima dolorem! Rem architecto
+                            consequatur voluptas dolore, nostrum consectetur!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card mt-4">
+                    <div class="card-header" style="background-color:aqua;">
+                        <h3>Work Experience</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="weT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- acadmic Qualification  -->
+                <div class="card mt-4">
+                    <div class="card-header" style="background-color:aqua;">
+                        <h3>Acadmic Qualification</h3>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqT">
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                            <li>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Illum, odit.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class="btn-print" style="background-color: aqua;">Print CV</button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
