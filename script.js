@@ -40,7 +40,7 @@ function generateCV(){
     document.getElementById("nameT2").innerHTML = nameField;
 
     // contact :
-    document.getElementById("contactT").innerHTML = document.getElementById("ContactField").value;
+    document.getElementById("contactT").innerHTML = document.getElementById("Contact:ContactField").value;
 
     // address :
     document.getElementById("addressT").innerHTML = document.getElementById("AddressField").value;
